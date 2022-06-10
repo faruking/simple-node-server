@@ -7,11 +7,11 @@ const userModel = require("./models");
 const app = express();
 const port = 80;
 
-// const corsOptions = {
-//     origin: 'https://nimble-croissant-9a38ab.netlify.app',
-//     credentials: true,
-// };
-// app.use(cors(corsOptions));
+const corsOptions = {
+    origin: 'https://nimble-croissant-9a38ab.netlify.app/details',
+    credentials: true,
+};
+app.use(cors(corsOptions));
 
 mongoose.connect('mongodb+srv://reactjobs:1234@reactdb.ruxmwvd.mongodb.net/myFirstDatabase/?retryWrites=true&w=majority',
     {
