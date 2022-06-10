@@ -8,7 +8,7 @@ const app = express();
 const port = 80;
 
 const corsOptions = {
-    origin: 'https://nimble-croissant-9a38ab.netlify.app/',
+    origin: 'https://nimble-croissant-9a38ab.netlify.app',
     credentials: true,
 };
 app.use(cors(corsOptions));
