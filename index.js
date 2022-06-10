@@ -11,7 +11,12 @@ const corsOptions = {
     origin: '*',
     credentials: true,
 };
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://nimble-croissant-9a38ab.netlify.app/"); // Update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 mongoose.connect('mongodb+srv://reactjobs:1234@reactdb.ruxmwvd.mongodb.net/myFirstDatabase/?retryWrites=true&w=majority',
     {
